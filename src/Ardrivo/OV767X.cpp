@@ -37,9 +37,7 @@ void OV767X::setPins([[maybe_unused]] int vsync, [[maybe_unused]] int href, [[ma
                      [[maybe_unused]] int xclk, [[maybe_unused]] const int dpins[8]) {}
 
 /*
- * VGA = 0,  // 640x480
- * CIF = 1,  // 352x240
- * QVGA = 2, // 320x240
+ 
  * QCIF = 3,  // 176x144
  * QQVGA = 4,  // 160x120
  */
