@@ -71,7 +71,7 @@ struct SMCE__DLL_RT_API HardwareSerial : Stream {
     [[nodiscard]] constexpr /* explicit(false) */ operator bool() noexcept { return true; }
 
   private:
-    friend SMCE_HardwareSerialImpl;
+    friend const SMCE_HardwareSerialImpl;
 };
 
 extern SMCE__DLL_RT_API HardwareSerial& Serial;
