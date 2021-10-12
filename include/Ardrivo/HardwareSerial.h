@@ -68,10 +68,10 @@ struct SMCE__DLL_RT_API HardwareSerial : Stream {
     inline size_t write(unsigned int n) { return write((std::uint8_t)n); }
     inline size_t write(int n) { return write((std::uint8_t)n); }
     using Print::write;
-    [[nodiscard]] constexpr /* explicit(false) */ operator bool() noexcept { return true; }
+    [[nodiscard]] constexpr /* explicit(false) */ operator bool() const noexcept { return true; }
 
   private:
-    friend const SMCE_HardwareSerialImpl;
+    friend SMCE_HardwareSerialImpl;
 };
 
 extern SMCE__DLL_RT_API HardwareSerial& Serial;
