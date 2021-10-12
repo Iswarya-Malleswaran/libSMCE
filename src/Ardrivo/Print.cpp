@@ -54,4 +54,4 @@ std::size_t Print::println(char c) { return write(c) + println(); }
 
 std::size_t Print::println() { return print('\r') + print('\n'); }
 
-void Print::flush() {}
+void Print::flush() { // Intentionally unimplemented }
