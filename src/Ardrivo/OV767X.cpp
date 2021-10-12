@@ -36,12 +36,6 @@ OV767X::~OV767X() = default;
 void OV767X::setPins([[maybe_unused]] int vsync, [[maybe_unused]] int href, [[maybe_unused]] int pclk,
                      [[maybe_unused]] int xclk, [[maybe_unused]] const int dpins[8]) {}
 
-/*
- 
- * QCIF = 3,  // 176x144
- * QQVGA = 4,  // 160x120
- */
-
 constexpr std::array<std::pair<uint16_t, uint16_t>, 5> resolutions{{
     {640, 480},
     {352, 240},
