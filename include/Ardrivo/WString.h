@@ -71,7 +71,7 @@ class SMCE__DLL_RT_API String {
     /* explicit(false) */ String(const char* cstr);
     explicit String(char c);
 
-    template <class T, class = typename std::enable_if<std::is_integral_v<T>::type>
+    template <class T, class = typename std::enable_if<std::is_integral<T>::value>::type>
     explicit String(T val) : m_u{std::to_string(val)} {}
     template <class T, class = typename std::enable_if<std::is_integral<T>::value>::type>
     String(T val, SMCE__BIN) : String{conv_tag, SMCE__bit_cast<typename std::make_unsigned<T>::type>(val), BIN} {}
